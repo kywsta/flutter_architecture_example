@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture_example/mvvm/services/product_service.dart';
-import 'package:flutter_architecture_example/mvvm/viewModels/product_view_model.dart';
+import 'package:flutter_architecture_example/mvvm/viewModels/product_list_view_model.dart';
 import 'package:flutter_architecture_example/mvvm/views/pages/product_list_page.dart';
 import 'package:provider/provider.dart';
 
