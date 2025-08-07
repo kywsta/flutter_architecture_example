@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture_example/mvvm/models/product.dart';
-import 'package:flutter_architecture_example/mvvm/viewModels/product_list_view_model.dart';
+import 'package:flutter_architecture_example/mvvm/view_models/product_list_view_model.dart';
 import 'package:flutter_architecture_example/mvvm/views/widgets/product_card.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
