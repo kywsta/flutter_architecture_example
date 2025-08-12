@@ -2,11 +2,11 @@ import 'package:flutter_architecture_example/clean/features/recipes/domain/entit
 import 'package:flutter_architecture_example/clean/features/recipes/domain/repositories/recipe_repository.dart';
 
 class GerRecipesUseCase {
-  final RecipeRepository postRepository;
+  final RecipeRepository recipeRepository;
 
-  GerRecipesUseCase(this.postRepository);
+  GerRecipesUseCase(this.recipeRepository);
 
   Future<List<Recipe>> call() async {
-    return await postRepository.getRecipes();
+    return await recipeRepository.getRecipes();
   }
 }

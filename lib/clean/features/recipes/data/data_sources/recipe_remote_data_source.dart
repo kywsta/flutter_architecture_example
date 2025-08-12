@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_architecture_example/clean/features/recipes/domain/entities/new_recipe.dart';
 import 'package:flutter_architecture_example/clean/features/recipes/domain/entities/recipe.dart';
 import 'package:http/http.dart' as http;
 
@@ -8,7 +9,7 @@ const String baseUrl = 'https://dummyjson.com';
 abstract class RecipeRemoteDataSource {
   Future<List<Recipe>> getRecipes();
   Future<Recipe> getRecipeById(int id);
-  Future<Recipe> createRecipe(Recipe recipe);
+  Future<Recipe> createRecipe(NewRecipe recipe);
   Future<Recipe> updateRecipe(Recipe recipe);
   Future<void> deleteRecipe(int id);
 }
@@ -19,7 +20,7 @@ class RecipeRemoteDataSourceImpl implements RecipeRemoteDataSource {
   RecipeRemoteDataSourceImpl({required http.Client client}) : _client = client;
 
   @override
-  Future<Recipe> createRecipe(Recipe recipe) async {
+  Future<Recipe> createRecipe(NewRecipe recipe) async {
     final response = await _client.post(
       Uri.parse('$baseUrl/recipes'),
       body: jsonEncode(recipe.toJson()),

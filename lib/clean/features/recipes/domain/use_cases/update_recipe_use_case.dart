@@ -2,9 +2,9 @@ import 'package:flutter_architecture_example/clean/features/recipes/domain/entit
 import 'package:flutter_architecture_example/clean/features/recipes/domain/repositories/recipe_repository.dart';
 
 class UpdateRecipeUseCase {
-  final RecipeRepository postRepository;
+  final RecipeRepository recipeRepository;
 
-  UpdateRecipeUseCase(this.postRepository);
+  UpdateRecipeUseCase(this.recipeRepository);
 
   Future<Recipe> call(Recipe recipe) async {
     if (recipe.id <= 0) {
@@ -15,6 +15,6 @@ class UpdateRecipeUseCase {
       throw 'Recipe should have a name, ingredients, and instructions';
     }
 
-    return await postRepository.updateRecipe(recipe);
+    return await recipeRepository.updateRecipe(recipe);
   }
 }

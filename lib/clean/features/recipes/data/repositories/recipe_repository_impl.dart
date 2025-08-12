@@ -1,4 +1,5 @@
 import 'package:flutter_architecture_example/clean/features/recipes/data/data_sources/recipe_remote_data_source.dart';
+import 'package:flutter_architecture_example/clean/features/recipes/domain/entities/new_recipe.dart';
 import 'package:flutter_architecture_example/clean/features/recipes/domain/entities/recipe.dart';
 import 'package:flutter_architecture_example/clean/features/recipes/domain/repositories/recipe_repository.dart';
 
@@ -18,7 +19,7 @@ class RecipeRepositoryImpl extends RecipeRepository {
   }
 
   @override
-  Future<Recipe> createRecipe(Recipe recipe) async {
+  Future<Recipe> createRecipe(NewRecipe recipe) async {
     return await remoteDataSource.createRecipe(recipe);
   }
 

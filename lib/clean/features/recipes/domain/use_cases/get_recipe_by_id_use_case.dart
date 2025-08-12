@@ -2,15 +2,15 @@ import 'package:flutter_architecture_example/clean/features/recipes/domain/entit
 import 'package:flutter_architecture_example/clean/features/recipes/domain/repositories/recipe_repository.dart';
 
 class GetRecipeByIdUseCase {
-  final RecipeRepository postRepository;
+  final RecipeRepository recipeRepository;
 
-  GetRecipeByIdUseCase(this.postRepository);
+  GetRecipeByIdUseCase(this.recipeRepository);
 
   Future<Recipe> call(int id) async {
     if (id <= 0) {
       throw 'Invalid recipe ID';
     }
 
-    return await postRepository.getRecipeById(id);
+    return await recipeRepository.getRecipeById(id);
   }
 }

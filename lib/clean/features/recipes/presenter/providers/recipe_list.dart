@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture_example/clean/features/recipes/domain/entities/recipe.dart';
-import 'package:flutter_architecture_example/clean/features/recipes/domain/use_cases/get_posts_use_case.dart';
+import 'package:flutter_architecture_example/clean/features/recipes/domain/use_cases/get_recipes_use_case.dart';
 
 class RecipeList extends ChangeNotifier {
   final GerRecipesUseCase getRecipesUseCase;
